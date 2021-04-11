@@ -30,7 +30,7 @@
                 "sha256:21f0f9643722675976004eb683c55d33c05486f94506672df3d6a141546f389d"
             ],
             "index": "pypi",
-            "version": "==3.2"
+            "version": "==3.0.5"
         },
         "pytz": {
             "hashes": [
@@ -45,7 +45,7 @@
                 "sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8"
             ],
             "markers": "python_version >= '3.5'",
-            "version": "==0.4.1"
+            "version": "==0.2.4"
         }
     },
     "develop": {}

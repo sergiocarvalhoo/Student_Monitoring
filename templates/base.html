@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>IFPB - Students</title>
+  <link rel="icon" type="imagem/png" href="{% static 'icons/IF_logo.png' %}" />
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href={% static 'css/style.css' %} type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="green darken-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="{% url 'home' %}" class="brand-logo">IFPB - Students</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Add New Student</a></li>
+      </ul>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Add New Student</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="section">
+        <div class="container body-content">
+            <div>
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+  </div>
+  <footer class="page-footer light-green">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About</h5>
+          <p class="grey-text text-lighten-4">The objective of the project is to put into practice the contents covered in the discipline, in
+            especially the spatial and NoSQL databases. You should build an application for
+            monitoring of graduates from the Systems Analysis and Development course at the Campus
+            Cajazeiras. The functionalities of the application are free, as long as the domain is maintained suggested.
+          </p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Repostitory</h5>
+          <ul>
+            <li><a class="white-text" href="#!">GithUb</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+  <!--  Scripts-->
+  <script src={% static 'js/jquery-2.1.1.min.js' %}></script>
+  <script src={% static 'js/materialize.js' %}></script>
+  <script src={% static 'js/init.js' %}></script>
+  </body>
+</html>
