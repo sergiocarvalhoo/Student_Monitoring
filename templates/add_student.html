@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <div class="row card-panel">
+        <h3>Add a New Student:</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="waves-effect green darken-3 btn" value="Save" />
+        </form>
+    </div>
+    <br>
+{% endblock content %}

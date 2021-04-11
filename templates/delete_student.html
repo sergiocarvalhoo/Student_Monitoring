@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <div class="row card-panel">
+        <h3>Delete Student Informations:</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p class="delete-student">Are you sure you want to delete "{{ student }}, Registration: {{ student.registration }}"?</p>
+            <input class="waves-effect green green darken-3 btn" type="submit" value="Confirm"/>
+    </form>
+    </div>
+    <br><br>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for student in students %}
+        {% if student.situation != null %}
+            <br>
+            <div class="row card-panel">
+                <h4><a class="student-name" href="{% url 'detail_student' student.pk %}">{{ student }}</a></h4>
+                <h4>Registration: {{ student.registration }}</h4>
+                <h4>Course: {{ student.course }}</h4>
+                <h4>Situation: {{ student.situation }}</h4>
+            </div>
+            <br>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}

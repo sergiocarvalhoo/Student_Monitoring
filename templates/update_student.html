@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <div class="row card-panel">
+        <h3>Update Student Informations:</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>Are you sure you want to update student: ({{ student }}) information? :</p>
+            <input class="waves-effect green darken-3 btn" type="submit" value="Update" />
+        </form>
+    </div>
+    <br>
+    <br>
+{% endblock content %}

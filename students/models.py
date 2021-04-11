@@ -7,11 +7,11 @@ from django.urls import reverse
 class Student(models.Model):
     name = models.CharField(max_length=100)
     registration = models.IntegerField()
-    course = models.CharField(max_length=30)
-    situation = models.CharField(max_length=30)
+    course = models.CharField(max_length=200)
+    situation = models.CharField(max_length=200)
 
-    # def get_absolute_url(self):
-    #     return reverse('list_student', args=[str(self.id)])
+    def get_absolute_url(self):
+        return reverse('detail_student', args=[str(self.id)])
 
     def __str__(self):
         return self.name[:40]
