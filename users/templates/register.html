@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <div class="row card-panel">
+        <h3>Please register to use this platform:</h3>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <label>First name</label>
+            {{ form.first_name }}
+            {{ form.first_name.errors }}
+            <label>Last name</label>
+            {{ form.last_name }}
+            {{ form.last_name.errors }}
+            <label>Username</label>
+            {{ form.username }}
+            {{ form.username.errors }}
+            <label>E-mail</label>
+            {{ form.email }}
+            {{ form.email.errors }}
+            <label>Password</label>
+            {{ form.password }}
+            {{ form.password.errors }}
+            <button class="btn waves-effect waves-light green darken-3" type="submit" name="action">Register
+                <i class="material-icons left">save</i>
+            </button>
+        </form>
+    </div>
+    <br>
+{% endblock content %}

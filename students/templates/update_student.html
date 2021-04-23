@@ -3,12 +3,14 @@
 {% block content %}
     <br>
     <div class="row card-panel">
-        <h3>Update Student Informations:</h3>
         <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
+            <h4>Update Student Informations:</h4>
             <p>Are you sure you want to update student: ({{ student }}) information? :</p>
-            <input class="waves-effect green darken-3 btn" type="submit" value="Update" />
+            <button class="btn waves-effect waves-light green darken-3" type="submit" name="action">Update
+                <i class="material-icons left">update</i>
+            </button>
         </form>
     </div>
     <br>
