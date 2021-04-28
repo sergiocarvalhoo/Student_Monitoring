@@ -23,13 +23,13 @@ class DetailStudentView(DetailView):
 class CreateStudentView(CreateView):
     model = Student
     template_name = 'add_student.html'
-    fields = ['name', 'registration', 'course', 'situation']
+    fields = ['name', 'registration', 'campus', 'course', 'situation']
 
 
 class UpdateStudentView(UpdateView):
     model = Student
     template_name = 'update_student.html'
-    fields = ['registration', 'course', 'situation']
+    fields = ['registration', 'campus', 'course', 'situation']
 
 
 class DeleteStudentView(DeleteView):

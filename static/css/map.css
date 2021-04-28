@@ -1,0 +1,12 @@
+svg{
+    height: 320px;
+    width: 400px;
+    margin-left: 27%;
+
+}
+
+path{
+    fill:#8bc34a;
+    stroke-width: 0.0020;
+    stroke: #16501a;
+}

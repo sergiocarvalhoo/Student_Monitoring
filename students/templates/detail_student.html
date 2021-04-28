@@ -6,10 +6,22 @@
         <h4>Student name: {{ student }}</h4>
         <h4>Registration: {{ student.registration }}</h4>
         <h4>Course: {{ student.course }}</h4>
+        <h4>IFPB - Campus: {{ student.campus }}</h4>
+        <svg id="viewbox">
+            <path id="path"></path>
+        </svg>
+        <p id="text">The map shows the city where the IFPB Campus - {{ student.campus }} is located</p>
         <h4>Situation: {{ student.situation }}</h4>
         <a id="update_student" class="btn waves-effect waves-light green darken-3" href="{% url 'update_student' student.pk %}"><i class="material-icons left">update</i>Update Student Informations</a>
         <br><br>
         <a id="delete_student" class="btn waves-effect waves-light green darken-3" href="{% url 'delete_student' student.pk %}"><i class="material-icons left">delete</i>Delete Student Informations</a>
-    </div>
     <br>
+    </div>
+    {% if student.campus %}
+    <script>
+        document.addEventListener('readystatechange', () => {
+            if (document.readyState === 'complete') showMap("{{ student.campus }}");
+        });
+    </script>
+    {% endif %}
 {% endblock content %}

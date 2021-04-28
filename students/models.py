@@ -5,8 +5,9 @@ from django.urls import reverse
 
 
 class Student(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=200)
     registration = models.IntegerField()
+    campus = models.CharField(max_length=200)
     course = models.CharField(max_length=200)
     situation = models.CharField(max_length=200)
 
